@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+      }
+
+      #main {
+        display: flex;
+        height: 100%;
+      }
+
+      #menu {
+        width: 200px;
+      }
+
+      #content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+
+      #subapp1,
+      #subapp2 {
+        flex: 1;
+        border: 1px solid grey;
+      }
+
+      #subapp1::before {
+        content: "#subapp1";
+        color: lightgrey;
+      }
+
+      #subapp2::before {
+        content: "#subapp2";
+        color: lightgrey;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <ul id="menu">
+        <li><a href="#/base/app1and2">app1 & app2</a></li>
+        <li><a href="#/base/app3">app3</a></li>
+      </ul>
+      <div id="content">
+        <div id="subapp1"></div>
+        <div id="subapp2"></div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
